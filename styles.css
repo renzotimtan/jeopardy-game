@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100vh;
+    border: 3px solid #00adb5;
+}
+
+body {
+    font-family: "Montserrat";
+    width: 80%;
+    margin: 0 auto;
+    background: #393e46;
+    color: #00adb5;
+}
+
+input {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    font: inherit;
+    margin-right: -5px;
+}
+
+input:active,
+input:focus {
+    outline: none;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #00adb5;
+    color: #393e46;
+    border: none;
+    font: inherit;
+}
+
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.point-cards {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.point-cards div {
+    /* Center text inside box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Style box */
+    width: 250px;
+    height: 80px;
+}
+
+.point-cards .question {
+    background: #00adb5;
+    color: #393e46;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+
+    /* Shadow */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.point-cards .question:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.category-name {
+    font-size: 23px;
+}
+
+.question {
+    font-size: 13px;
+}
+
+/* Modal */
+/* The Modal (background) */
+.modal {
+    text-align: center;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #393e46;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 60px;
+    border: 2px solid #00adb5;
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+
+.clicked-question {
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
