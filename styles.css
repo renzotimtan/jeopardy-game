@@ -11,6 +11,7 @@ html {
     border: 3px solid #00adb5;
 }
 
+
 body {
     font-family: "Montserrat";
     width: 80%;
@@ -43,7 +44,6 @@ button {
     font: inherit;
 }
 
-
 .game-header {
     display: flex;
     justify-content: space-between;
@@ -58,7 +58,7 @@ button {
     justify-content: space-between;
 }
 
-.point-cards div {
+.point-cards button, .point-cards div  {
     /* Center text inside box */
     display: flex;
     justify-content: center;
@@ -91,7 +91,7 @@ button {
 }
 
 .question {
-    font-size: 13px;
+    font-size: 25px;
 }
 
 /* Modal */
@@ -121,6 +121,5 @@ button {
 
 .clicked-question {
     margin-bottom: 30px;
-    font-size: 40px;
+    font-size: 30px;
 }
-
