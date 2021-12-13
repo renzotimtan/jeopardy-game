@@ -4,18 +4,23 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Jeopardy Game By Renzo Tan</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <header class="game-header">
+        <header class="animate__animated animate__fadeInLeft game-header">
             <h1>Trivia Game Show</h1>
             <h1 class="game-score">Score: <span class="score">0</span></h1>
         </header>
 
         <hr />
 
-        <main class="point-cards">
+        <main
+            class="
+                animate__animated animate__fadeIn animate__delay-1s
+                point-cards
+            "
+        >
             <section class="category category-0">
                 <div class="category-name"><p>Category</p></div>
                 <button class="question points-100"><p>100</p></button>
@@ -52,17 +57,21 @@
 
         <!-- Modal -->
         <aside id="myModal" class="modal">
-            <div class="modal-content">
+            <div class="animate__animated animate__backInDown modal-content">
                 <h1 class="clicked-question">Some text in the Modal..</h1>
 
                 <input class="answer" type="text" />
                 <button class="enter-answer">Enter</button>
             </div>
         </aside>
-        <small
+        <!-- <small class="note"
             >To Sir Ian: you can check the answer in the console after clicking
             a question just to test if it works</small
-        >
+        > -->
     </body>
     <script src="index.js"></script>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </html>

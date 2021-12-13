@@ -1,8 +1,14 @@
+//  Setup questions and score
 const allCategories = document.querySelectorAll(".category");
 const modal = document.getElementById("myModal");
 const categoryIds = [1892, 4483, 88, 218];
 const questionContainer = {};
 let score = 0;
+let questionsLeft = 20;
+
+// Audio
+const audio = new Audio("song.mp3");
+audio.loop = true;
 
 // Fetch the questions
 for (let i = 0; i < categoryIds.length; i++) {
@@ -49,7 +55,6 @@ const generateData = (data, i) => {
 };
 
 // Tracking question clicked and answer
-let categoryPicked = 0;
 let pointsPicked = 0;
 let correctAnswer = "";
 
@@ -77,8 +82,13 @@ const changeData = (data, i) => {
             // Open modal
             modal.style.display = "block";
 
+            // start music
+            audio.play();
+
+            // Decrement questions left
+            questionsLeft--;
+
             // reinitialize vars to track what question was picked and answer
-            categoryPicked = data.title;
             pointsPicked = questionObj.value;
             correctAnswer = questionObj.answer;
             console.log(correctAnswer);
@@ -102,10 +112,22 @@ const resolveAnswer = () => {
     }
     answer.value = "";
     modal.style.display = "none";
+    audio.pause();
+
+    // Check if questions left is 0
+    if (questionsLeft <= 0) {
+        const pointCards = document.querySelector(".point-cards");
+        pointCards.innerHTML = `<h1>You won ${score} points!</h1>`;
+        pointCards.style.fontSize = "40px";
+        pointCards.style.marginTop = "50px";
+        // document.querySelector(".note").style.display = "none";
+    }
 };
 
 // Resolve answer if enter button is click
-document.querySelector(".enter-answer").addEventListener("click", () => resolveAnswer());
+document
+    .querySelector(".enter-answer")
+    .addEventListener("click", () => resolveAnswer());
 
 // Resolve answer if enter button key is pressed
 document.querySelector(".answer").addEventListener("keyup", (e) => {

@@ -11,7 +11,6 @@ html {
     border: 3px solid #00adb5;
 }
 
-
 body {
     font-family: "Montserrat";
     width: 80%;
@@ -58,7 +57,8 @@ button {
     justify-content: space-between;
 }
 
-.point-cards button, .point-cards div  {
+.point-cards button,
+.point-cards div {
     /* Center text inside box */
     display: flex;
     justify-content: center;
@@ -115,11 +115,18 @@ button {
     background-color: #393e46;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 60px;
-    border: 2px solid #00adb5;
+    border: 4px solid #00adb5;
     width: 60%; /* Could be more or less, depending on screen size */
+    border-radius: 5px;
 }
 
 .clicked-question {
     margin-bottom: 30px;
     font-size: 30px;
+}
+
+/*  ANIMATIONS */
+
+.category-0 {
+    --animate-delay: 2s !important;
 }
